@@ -439,8 +439,8 @@ SELECT
 	MAX(p.in_3yr_percent_return) AS in_3yr_median_return
 FROM(
 	SELECT
-		t.trade_date,
-		t.new_ath_marker,
+	t.trade_date,
+	t.new_ath_marker,
 		t.in_3yr_percent_return,
 		PERCENT_RANK() OVER(ORDER BY t.in_3yr_percent_return) AS percentile
 	FROM spx_trade_return t
